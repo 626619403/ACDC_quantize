@@ -1319,7 +1319,16 @@ class HookedTransformer(HookedRootModule):
                     - state_dict[f"blocks.{l}.mlp.b_out"].mean()
                 )
         return state_dict
-
+     
+    def quantize_block_weights(self, block, num_bits=4):
+        quantized_weights = {}
+        for name, param in block.named_parameters():
+            if param.requires_grad:  
+                quantized, scale, zero_point = self.quantize_tensor(param.data, num_bits)
+                quantized_weights[name] = (quantized, scale, zero_point)
+                param.data = self.dequantize_tensor(quantized, scale, zero_point)
+        return quantized_weights
+     
     def center_unembed(self, state_dict: Dict[str, torch.Tensor]):
         """Centers the unembedding weights W_U. This is done by subtracting the mean of the weights from the weights
         themselves. This is done in-place. As softmax is translation invariant, this changes the logits but not the
@@ -1963,11 +1972,4 @@ class HookedTransformer(HookedRootModule):
         return (quantized - zero_point) * scale
 
     
-    def quantize_block_weights(self, block, num_bits=8):
-        quantized_weights = {}
-        for name, param in block.named_parameters():
-            if param.requires_grad:  
-                quantized, scale, zero_point = self.quantize_tensor(param.data, num_bits)
-                quantized_weights[name] = (quantized, scale, zero_point)
-                param.data = self.dequantize_tensor(quantized, scale, zero_point)
-        return quantized_weights
+
