@@ -5,8 +5,8 @@
 - 所有在这个仓库的python文件如需使用都需要在对应位置替换，替换的位置在文件的开头会写。其中cmapy文件必须被替换，否则冲突。
 - ACDC的代码还未彻底改完。如果想要跑，可以看最下面的安装和bug修正。由于ACDC代码过多，放上来很乱，我先不放了。
 - attention文件还未彻底完成，这个版本仅供检查量化和理论方面是否有误。***王良宇*** 良宇哥可以看一下这个量化方法有没有什么问题。
-- 对应论文是 https://www.overleaf.com/project/6777f3fb672efc7c99aa256c。目前只写了引言。***杨澍*** 树姐可以改一下。
-- wandb仓库是 https://wandb.ai/rat-nest/acdc/overview。
+- 对应论文是 https://www.overleaf.com/project/6777f3fb672efc7c99aa256c 。目前只写了引言。***杨澍*** 树姐可以改一下。
+- wandb仓库是 https://wandb.ai/rat-nest/acdc/overview 。
 
 ## TODO
 
