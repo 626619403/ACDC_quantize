@@ -3,7 +3,9 @@
 ## 2/9 TODO
 
 bug修完了，但环境因为要装transformer engine又炸了 torch不要用2.5以上版本 jaxlib在 https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 下，pip没有
+
 配完环境可能还会有点bug，告我我改
+
 包已经上传了
 
 ## 2/8 TODO
