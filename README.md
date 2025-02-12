@@ -5,7 +5,7 @@
 
 ## 注意
 
-- 所有在这个仓库的python文件如需使用都需要在对应位置替换，替换的位置在文件的开头会写。其中cmapy文件必须被替换，否则冲突。
+- 这个仓库的文件夹下python文件如需使用都需要在对应位置替换，替换的位置在环境的对应位置（我的是miniconda3/lib/python3.12/site-packages/）。其中cmapy文件必须被替换，否则冲突。
 - 对应论文是 https://www.overleaf.com/project/6777f3fb672efc7c99aa256c 
 
 ## ACDC 原版与改版
