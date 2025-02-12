@@ -1,17 +1,6 @@
 # ACDC_quantize
 
-## 2/9 TODO
-
-bug修完了，但环境因为要装transformer engine又炸了 torch不要用2.5以上版本 jaxlib在 https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 下，pip没有
-
-配完环境可能还会有点bug，告我我改
-
-包已经上传了
-
-## 2/8 TODO
-
-代码写完了，但没改完，得修bug，修完bug上传  还得跑一下attribution patching在除了tracr的五个任务的数据，代码用你原来的就行，麻烦林哥了 或者等我改完自己跑也行。
-除了这四个还得加一下别的方法的baseline，比如王老师发群里那个 我改完这个代码找其他的 树姐如果有空也可以找一下
+所有代码已经写完并且调好。可以跑通并且结果还行。可以跑数据了。
 
 ## 注意
 
