@@ -21,7 +21,7 @@
 
 - torch>=2.5, cuda>=12.4, triton==3.2 GPU:H800
 - requirements里面有是新的依赖文件，不要用原来网站上的poetry。下载完后记得换文件并将triton变回3.2。
-- jaxlib和jax要手动装。选0.49版本，0.5没有lib，低版本依赖冲突。
+- jaxlib和jax要手动装。选0.4.29版本，0.5没有lib，低版本依赖冲突。
 - 若要使用原版:
   - 将解压下的文件中所有带org的装到原版的位置
   - 将experiment中autodl-tmp/acdc_q/acdc/TLACDCExperiment.py中的if self.current_node != None and self.current_node.index.hashable_tuple:及其包含的代码删除\
